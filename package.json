@@ -1,0 +1,17 @@
+{
+  "name": "trae-forum-helper",
+  "version": "1.0.0",
+  "description": "TRAE 中文社区自动浏览助手",
+  "main": "background.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "keywords": [
+    "browser-extension",
+    "trae",
+    "forum"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {}
+}
