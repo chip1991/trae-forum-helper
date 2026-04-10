@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "TRAE 中文社区自动浏览助手",
+  "version": "1.0.0",
+  "description": "自动浏览 TRAE 中文社区新帖子，点赞后继续浏览下一个",
+  "permissions": [
+    "tabs",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://forum.trae.cn/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://forum.trae.cn/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "TRAE 自动浏览助手"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
